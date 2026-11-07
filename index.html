@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estaciona-FATEC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1 class="logo">Estaciona-FATEC</h1>
+    <div class="relogio"><span id="data"></span><span id="hora"></span></div>
+  </header>
+
+  <main>
+    <!-- TELA 1: Início -->
+    <section id="tela-inicio" class="tela ativa">
+      <div class="coluna">
+        <div class="painel escuro">
+          <h2>VAGAS</h2>
+          <dl>
+            <dt>DISPONÍVEIS:</dt><dd id="vagas-livres">0</dd>
+            <dt>OCUPADAS:</dt><dd id="vagas-ocupadas">0</dd>
+            <dt>TOTAIS:</dt><dd id="vagas-totais">50</dd>
+          </dl>
+        </div>
+        <div class="painel claro">
+          <h2>VALORES</h2>
+          <dl>
+            <dt>ATÉ 1 HORA:</dt><dd>15</dd>
+            <dt>DEMAIS HORAS:</dt><dd>10</dd>
+            <dt>DIÁRIA:</dt><dd>85</dd>
+          </dl>
+          <p class="nota">Tolerância de 15 min</p>
+        </div>
+      </div>
+      <div class="coluna botoes">
+        <button class="btn b1" data-ir="ocupar">OCUPAR</button>
+        <button class="btn b2" data-ir="sair">SAIR</button>
+        <button class="btn b3" data-ir="veiculos">VER VEÍCULO</button>
+      </div>
+    </section>
+
+    <!-- TELA 2: Registro de entrada -->
+    <section id="tela-ocupar" class="tela">
+      <form id="form-entrada" class="coluna" novalidate>
+        <div class="formulario">
+          <label>Nome: <input id="e-nome" type="text" autocomplete="off"></label>
+          <label>Placa: <input id="e-placa" type="text" maxlength="8" autocomplete="off"></label>
+          <label>Prisma: <input id="e-prisma" type="text" autocomplete="off"></label>
+          <label>Início: <input id="e-inicio" type="datetime-local"></label>
+        </div>
+        <p class="msg" id="msg-entrada" role="alert"></p>
+      </form>
+      <div class="coluna botoes">
+        <button class="btn b2" id="btn-guardar" type="button">Guardar</button>
+        <button class="btn b2" data-ir="inicio" type="button">Voltar</button>
+      </div>
+    </section>
+
+    <!-- TELA 3: Registro de saída -->
+    <section id="tela-sair" class="tela">
+      <div class="coluna">
+        <div class="formulario">
+          <label>Placa: <input id="s-placa" type="text" maxlength="8" autocomplete="off"></label>
+          <button class="btn b3 pequeno" id="btn-buscar" type="button">Buscar veículo</button>
+          <label>Nome: <input id="s-nome" type="text" readonly></label>
+          <label>Prisma: <input id="s-prisma" type="text" readonly></label>
+          <label>Início: <input id="s-inicio" type="text" readonly></label>
+          <label>Fim: <input id="s-fim" type="text" readonly></label>
+        </div>
+      </div>
+      <div class="coluna">
+        <div class="resumo">
+          <p>Valor total: <strong id="s-valor">--</strong></p>
+          <p>Tempo total: <strong id="s-tempo">--</strong></p>
+          <p>Pix: <strong>398.251.188-10</strong></p>
+        </div>
+        <p class="msg" id="msg-saida" role="alert"></p>
+        <div class="botoes-linha">
+          <button class="btn b1 pequeno" id="btn-confirmar" type="button" disabled>Confirmar saída</button>
+          <button class="btn b2 pequeno" data-ir="inicio" type="button">Voltar</button>
+        </div>
+        <p class="agradece" id="agradece" hidden>Obrigado por usar nosso serviço!</p>
+      </div>
+    </section>
+
+    <!-- TELA 4: Veículos ativos -->
+    <section id="tela-veiculos" class="tela vertical">
+      <h2 class="titulo-tela">VEÍCULOS</h2>
+      <div class="lista-box"><ul id="lista" class="lista"></ul></div>
+      <button class="btn b2 pequeno" data-ir="inicio">Voltar</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
