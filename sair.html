@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESTACIONA-FATEC</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-pagina="saida">
+<header class="cabecalho"><a class="logo" href="index.html">ESTACIONA-FATEC</a><div class="relogio" id="relogio"></div></header>
+<main class="conteudo">
+<div id="mensagem" class="msg" role="status"></div>
+<div class="grade"><section class="form escuro">
+<div class="campo"><label for="nome">Nome:</label><input id="nome" readonly></div>
+<div class="campo"><label for="placa">Placa:</label><input id="placa" list="placas" maxlength="8" autocomplete="off" placeholder="Digite a placa"></div><datalist id="placas"></datalist>
+<div class="campo"><label for="prisma">Prisma:</label><input id="prisma" readonly></div>
+<div class="campo"><label for="inicio">Inicio:</label><input id="inicio" readonly></div>
+<div class="campo"><label for="fim">Fim:</label><input id="fim" readonly></div></section>
+<section><p class="resumo">Valor total: <span id="valor">—</span><br>Tempo Total: <span id="tempo">—</span><br>Pix: 398.251.188-10</p>
+<div class="acoes" style="justify-content:flex-start"><button class="botao b1 menor" id="btnConfirmar" disabled>Confirmar saída</button><a class="botao b2 menor" href="index.html">Voltar</a></div>
+<p class="obrigado">Obrigado por usar nosso serviço!</p></section></div>
+</main><script src="js/storage.js"></script><script src="js/script.js"></script></body></html>

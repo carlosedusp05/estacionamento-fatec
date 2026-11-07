@@ -1,8 +1,11 @@
+# ESTACIONA - FATEC
+![](./img/Captura%20de%20tela%202026-11-07%20005019.png)
+
 ## Problema
 Um dono de estacionamento precisa de um software que melhore o controle de vagas em seru empreendimento, fazendo as coisas no papel e na caneta fica uma confusão.
 
 ## Objetivo
-Otimizar o gerenciamento de vagas do estacionameto com um sistema completo e de facil usabilidade tanto para administrador quanto o cliente do estacionamento.
+Otimizar o gerenciamento de vagas do estacionameto com um sistema completo e de facil usabilidade tanto para administrador quanto o cliente do estacionamento usando IA para realização do código.
 
 ## 5 perguntas que como Dev faria(com suas respostas esperadas)
 1. Quais os métodos de pagamentos são aceitos?
@@ -19,3 +22,9 @@ R: em até 1 Mês
 
 5. Como vocês lidam caso o cliente perca o ticket?
 R: Nós gostariamos de atrelar cada carro com o nome do cliente caso o mesmo perca solicitamos o documento e comparamos com o nome em sistema.
+
+## Autores 
+* [Carlos Eduardo](https://github.com/carlosedusp05)
+* [Nicolas Nogueira]()
+* [Guilherme Andrade]()
+* [Rafael]()
